@@ -1,5 +1,10 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
@@ -9,7 +14,6 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <ui:include src="menu.xhtml"/>
         <h:form id="formCadastroAnimal">
             <p:growl id="dro" life="4000"/>
             <p:fieldset legend="Cadastro do Animal">
@@ -31,13 +35,14 @@
                     <p:message for="txtnascimento"/>
 
                     <h:outputText value="Peso:"/>
-                    <p:inputText  value="#{bAnimal.nome}"
+                    <p:inputText  value="#{bAnimal.nome}"/>
                                   <h:outputText/>
 
                 </p:panelGrid>
                 <p:commandButton value="Cadastrar"
                                  oncomplete="PF('widDialAnimal').show()"/>
             </p:fieldset>
+            </h:form>
 
             <p:confirmDialog id="dialAnimal" message="Deseja realmente cadastrar esse Animal?"
                              visible="false" widgetVar="widDialAnimal" showEffect="fade"
